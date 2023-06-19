@@ -22,7 +22,7 @@ class UptoboxCom(XFSAccount):
     LOGIN_SKIP_PATTERN = r"https://uptobox\.eu/logout"
 
     PREMIUM_PATTERN = r'Premium member'
-    VALID_UNTIL_PATTERN = r"class='expiration-date .+?'>(\d{1,2} [\w^_]+ \d{4})"
+    VALID_UNTIL_PATTERN = r'data-tippy-content="Expires on.*?(\d{4}.\d{1,2}.\d{1,2})'
 
 
     def signin(self, user, password, data):
